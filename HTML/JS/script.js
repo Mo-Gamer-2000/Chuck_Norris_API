@@ -1,16 +1,62 @@
-fetch("https://api.chucknorris.io/jokes/random")
-    .then(res => res.json())
-    .then(data => console.log(data))
-// fetch("https://api.chucknorris.io/jokes/random?category={category}")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
-fetch("https://api.chucknorris.io/jokes/categories")
-    .then(res => res.json())
-    .then(data => console.log(data))
-// fetch("https://api.chucknorris.io/jokes/search?query={query}")
-//     .then(res => res.json())
-//     .then(data => console.log(data))
+const xhr1 = new XMLHttpRequest();
 
+xhr1.onreadystatechange = function () {
+    if (xhr1.readyState === XMLHttpRequest.DONE) {
+        if (xhr1.status === 200) {
+            console.log(JSON.parse(xhr1.responseText));
+        } else {
+            console.error(xhr1.statusText);
+        }
+    }
+};
+
+xhr1.open('GET', 'https://api.chucknorris.io/jokes/random');
+xhr1.send();
+
+// const xhr2 = new XMLHttpRequest();
+
+// xhr2.onreadystatechange = function() {
+//   if (xhr2.readyState === XMLHttpRequest.DONE) {
+//     if (xhr2.status === 200) {
+//       console.log(JSON.parse(xhr2.responseText));
+//     } else {
+//       console.error(xhr2.statusText);
+//     }
+//   }
+// };
+
+// xhr2.open('GET', 'https://api.chucknorris.io/jokes/random?category={category}');
+// xhr2.send();
+
+const xhr3 = new XMLHttpRequest();
+
+xhr3.onreadystatechange = function () {
+    if (xhr3.readyState === XMLHttpRequest.DONE) {
+        if (xhr3.status === 200) {
+            console.log(JSON.parse(xhr3.responseText));
+        } else {
+            console.error(xhr3.statusText);
+        }
+    }
+};
+
+xhr3.open('GET', 'https://api.chucknorris.io/jokes/categories');
+xhr3.send();
+
+// const xhr4 = new XMLHttpRequest();
+
+// xhr4.onreadystatechange = function() {
+//   if (xhr4.readyState === XMLHttpRequest.DONE) {
+//     if (xhr4.status === 200) {
+//       console.log(JSON.parse(xhr4.responseText));
+//     } else {
+//       console.error(xhr4.statusText);
+//     }
+//   }
+// };
+
+// xhr4.open('GET', 'https://api.chucknorris.io/jokes/search?query={query}');
+// xhr4.send();
 
 
 // Get a reference to the button and the joke text element
@@ -19,36 +65,48 @@ const jokeText = document.querySelector('#joke-text');
 
 // Add an event listener to the button that listens for clicks
 jokeButton.addEventListener('click', function () {
-    // When the button is clicked, make a GET request to the Chuck Norris jokes API to get a random joke
-    fetch('https://api.chucknorris.io/jokes/random')
-        // When the response is received, parse the JSON data from the response body
-        .then(response => response.json())
+    // Create a new XHR object
+    const xhr = new XMLHttpRequest();
+
+    // Set the URL of the request to the Chuck Norris jokes API
+    xhr.open('GET', 'https://api.chucknorris.io/jokes/random');
+
+    // Set the response type to JSON
+    xhr.responseType = 'json';
+
+    // When the request is finished and the response is received
+    xhr.onload = function () {
         // Update the joke text element with the joke
-        .then(data => {
-            jokeText.textContent = data.value;
-        })
-        // If an error occurs, log it to the console
-        .catch(error => {
-            console.error(error);
-        });
+        jokeText.textContent = xhr.response.value;
+    };
+
+    // If an error occurs, log it to the console
+    xhr.onerror = function () {
+        console.error(xhr.statusText);
+    };
+
+    // Send the request
+    xhr.send();
 });
 
-// Get a reference to the unordered list element
-const categoriesList = document.querySelector('#categories');
 
-// Make a GET request to the Chuck Norris jokes API to get a list of categories
-fetch('https://api.chucknorris.io/jokes/categories')
-    // When the response is received, parse the JSON data from the response body
-    .then(response => response.json())
-    // Loop through the list of categories and add them to the unordered list
-    .then(data => {
-        data.forEach(category => {
-            const li = document.createElement('li');
-            li.textContent = category;
-            categoriesList.appendChild(li);
-        });
-    })
-    // If an error occurs, log it to the console
-    .catch(error => {
-        console.error(error);
-    });
+const xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            const categoriesList = document.querySelector('#categories');
+            data.forEach(category => {
+                const li = document.createElement('li');
+                li.textContent = category;
+                categoriesList.appendChild(li);
+            });
+        } else {
+            console.error(xhr.statusText);
+        }
+    }
+};
+
+xhr.open('GET', 'https://api.chucknorris.io/jokes/categories');
+xhr.send();

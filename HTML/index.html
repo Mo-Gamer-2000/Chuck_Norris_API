@@ -1,14 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--
+DOCTYPE declaration specifies that this is an HTML document
+-->
+<html lang="en-GB">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8" />
 
+    <!-- Viewport settings to control the layout on small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Compatibility setting for older browsers -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Title of the document -->
+    <title>The Chuckle Factory</title>
+
+    <!-- Link to a CSS stylesheet for the document -->
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
 <body>
+    <!-- Header with a heading element -->
+    <header>
+        <h1>The Chuckle Factory</h1>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Section element containing the content -->
+        <section class="content">
+            <!-- Image element with a random image from Unsplash -->
+            <img src="https://source.unsplash.com/random/200x200?sig=1" alt="random" />
+
+            <!-- Div element with a class of "image-caption" containing a caption for the image -->
+            <div class="image-caption">
+                <p>A random image from Unsplash</p>
+            </div>
+
+            <!-- Button element with the text "Get Joke" -->
+            <button id="joke-button">Get Joke</button>
+
+            <!-- Div element with the class "joke-box" containing a heading and a paragraph element -->
+            <div class="joke-box">
+                <h2>Joke of the day</h2>
+                <p id="joke-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer with a copyright notice -->
+    <footer>
+        <p>Copyright &copy; 2022. All rights reserved by Moeez Abdul</p>
+    </footer>
+
+    <!-- Script element linking to a JavaScript file -->
+    <script src="JS/script.js"></script>
 
 </body>
 

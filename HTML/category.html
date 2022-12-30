@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Category</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/category.css">
 </head>
 
 <body>
@@ -21,14 +21,43 @@
             </ul>
         </nav>
     </header>
+    <!-- Main content area -->
     <main>
-        <!-- main content goes here -->
+        <!-- Section element containing the content -->
+        <section class="content">
+            <!-- Image element with a random image from Unsplash -->
+            <img src="https://source.unsplash.com/random/200x200?sig=1" alt="random" />
+
+            <!-- Div element with a class of "image-caption" containing a caption for the image -->
+            <div class="image-caption">
+                <p>Random Images from Unsplash</p>
+            </div>
+
+            <!-- Button element with the text "Get Joke" -->
+            <button id="joke-button">Click Me!</button>
+
+            <!-- Div element with the class "joke-box" containing a heading and a paragraph element -->
+            <div class="joke-box">
+                <h2>Joke of the day</h2>
+                <p id="joke-text"></p>
+            </div>
+
+            <ul id="categories"></ul>
+            <p id="joke-text"></p>
+            <!--TEST ZONE-->
+            <div class="movie-text">
+                <button type="button" id="movie-button">Movie</button>
+                <p id="movie-text"></p>
+            </div>
+
+            <!--TEST ZONE-->
+        </section>
     </main>
     <footer>
         <!-- footer content goes here -->
         <p>Copyright &copy; 2022. All rights reserved by Moeez Abdul</p>
     </footer>
-    <script src="JS/script.js"></script>
+    <script src="JS/category.js"></script>
 </body>
 
 </html>

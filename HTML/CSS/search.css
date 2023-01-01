@@ -16,6 +16,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 120px;
+    padding: 20px;
 }
 
 h1 {
@@ -60,6 +61,19 @@ main {
     min-height: calc(100vh - 80px);
 }
 
+#under-maintenance {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffc400;
+    color: #000000;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding: 0%;
+    font-size: medium;
+}
+
 /* Set elements with the .content class to display as a flex container with items in a column and aligned to the center */
 .content {
     display: flex;
@@ -75,23 +89,46 @@ main {
     border: 2px solid black;
 }
 
-/* Set elements with the .joke-box class to have a white background, a dark gray border, and 20px padding and margin */
-.joke-box {
+/* Set the form and input elements to have a white background and a dark gray border */
+#search-form,
+#search-input {
     background-color: #fff;
     border: 2px solid #333;
-    padding: 20px;
-    margin: 20px 0;
 }
 
-/* Add a bottom margin of 10px to h2 elements within the .joke-box element */
-.joke-box h2 {
-    margin: 0 0 10px 0;
+/* Set the input element to have a height of 40px and 20px padding */
+#search-input {
+    height: 40px;
+    padding: 0 20px;
 }
 
-/* Set the font size of paragraphs within the .joke-box element to 18px and remove the default margin */
-.joke-box p {
+/* Set the button element to have a dark gray background, white text, and 20px padding */
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0 20px;
+}
+
+/* Set the button element to have a darker gray background when it is hovered over */
+button:hover {
+    background-color: #444;
+}
+
+/* Set the container for the search results to have a white background and a dark gray border */
+#search-results {
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+/* Set the list element for the jokes to have a margin of 20px */
+#jokes {
+    margin: 20px;
+}
+
+/* Set the list items for the jokes to have a font size of 18px and a margin of 10px */
+#jokes li {
     font-size: 18px;
-    margin: 0;
+    margin: 10px 0;
 }
 
 /* Set the footer background color to dark gray, the text color to white, and display the footer as a flex container with items aligned and justified to the center. Set the height to 80px. */
@@ -102,27 +139,4 @@ footer {
     align-items: center;
     justify-content: center;
     height: 100px;
-}
-
-/* Set the background color of the #joke-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
-#joke-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 2px solid black;
-}
-
-/* Set the background color of the #joke-button element to darker gray when it is hovered over */
-#joke-button:hover {
-    background-color: #444;
-}
-
-/* Set the margin and font size of the #joke-text element */
-#joke-text {
-    margin: 20px 0;
-    /* add 20px space above and below the element */
-    font-size: 18px;
-    /* set the font size to 18px */
 }

@@ -17,21 +17,6 @@ xhr1.onreadystatechange = function () {
 xhr1.open('GET', 'https://api.chucknorris.io/jokes/random');
 xhr1.send();
 
-// const xhr2 = new XMLHttpRequest();
-
-// xhr2.onreadystatechange = function () {
-//     if (xhr2.readyState === XMLHttpRequest.DONE) {
-//         if (xhr2.status === 200) {
-//             console.log(JSON.parse(xhr2.responseText));
-//         } else {
-//             console.error(xhr2.statusText);
-//         }
-//     }
-// };
-
-// xhr2.open('GET', 'https://api.chucknorris.io/jokes/random?category={category}');
-// xhr2.send();
-
 const xhr3 = new XMLHttpRequest();
 
 xhr3.onreadystatechange = function () {
@@ -46,22 +31,6 @@ xhr3.onreadystatechange = function () {
 
 xhr3.open('GET', 'https://api.chucknorris.io/jokes/categories');
 xhr3.send();
-
-// const xhr4 = new XMLHttpRequest();
-
-// xhr4.onreadystatechange = function () {
-//     if (xhr4.readyState === XMLHttpRequest.DONE) {
-//         if (xhr4.status === 200) {
-//             console.log(JSON.parse(xhr4.responseText));
-//         } else {
-//             console.error(xhr4.statusText);
-//         }
-//     }
-// };
-
-// xhr4.open('GET', 'https://api.chucknorris.io/jokes/search?query={query}');
-// xhr4.send();
-
 
 // Get a reference to the button and the joke text element
 const jokeButton = document.querySelector('#joke-button');
@@ -93,7 +62,6 @@ jokeButton.addEventListener('click', function () {
     xhr.send();
 });
 
-
 const xhr = new XMLHttpRequest();
 
 xhr.onreadystatechange = function () {
@@ -111,47 +79,3 @@ xhr.onreadystatechange = function () {
         }
     }
 };
-
-xhr.open('GET', 'https://api.chucknorris.io/jokes/categories');
-xhr.send();
-
-
-// ---------------------------------------------------------------------------
-//TESTING ZONE
-// Get a reference to the button and the joke text element
-// const movieButton = document.querySelector('movie-button');
-// const movieText = document.querySelector('movie-text');
-
-// // Add an event listener to the button that listens for clicks
-// movieButton.addEventListener('click', function () {
-//     // Get references to the button, category select, and joke container
-//     const xhr1 = new XMLHttpRequest();
-//     xhr1.open('GET', 'https://api.chucknorris.io/jokes/random?category=movie');
-
-//     xhr1.onload = function () {
-//         if (xhr1.readyState === XMLHttpRequest.DONE) {
-//             if (xhr1.status === 200) {
-//                 console.log(JSON.parse(xhr1.responseText));
-//             } else {
-//                 console.error(xhr1.statusText);
-//             }
-//         }
-//     };
-//     xhr1.send();
-// });
-const movieButton = document.getElementById("movie-button");
-const movieText = document.getElementById("movie-text");
-
-movieButton.addEventListener("click", function () {
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://api.chucknorris.io/jokes/random?category=movie");
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            movieText.textContent = data.value;
-        } else {
-            console.log(`Error: ${xhr.status}`);
-        }
-    };
-    xhr.send();
-});

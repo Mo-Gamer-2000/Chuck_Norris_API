@@ -104,8 +104,8 @@ footer {
     height: 100px;
 }
 
-/* Set the background color of the #joke-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
-#joke-button {
+/* Set the background color of the #movie-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
+#movie-button {
     background-color: #333;
     color: #fff;
     border: none;
@@ -114,15 +114,65 @@ footer {
     border: 2px solid black;
 }
 
-/* Set the background color of the #joke-button element to darker gray when it is hovered over */
-#joke-button:hover {
+/* Set the background color of the #movie-button element to darker gray when it is hovered over */
+#movie-button:hover {
     background-color: #444;
 }
 
-/* Set the margin and font size of the #joke-text element */
-#joke-text {
+/* Set the margin and font size of the #movie-text element */
+#movie-text {
     margin: 20px 0;
     /* add 20px space above and below the element */
     font-size: 18px;
     /* set the font size to 18px */
+    border: 2px solid black;
+}
+
+/* Set the background color of the #animal-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
+#animal-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+/* Set the background color of the #animal-button element to darker gray when it is hovered over */
+#animal-button:hover {
+    background-color: #444;
+}
+
+/* Set the margin and font size of the #animal-text element */
+#animal-text {
+    margin: 20px 0;
+    /* add 20px space above and below the element */
+    font-size: 18px;
+    /* set the font size to 18px */
+    border: 2px solid black;
+}
+
+/* Set the background color of the #history-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
+#history-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+/* Set the background color of the #history-button element to darker gray when it is hovered over */
+#history-button:hover {
+    background-color: #444;
+}
+
+/* Set the margin and font size of the #history-text element */
+#history-text {
+    margin: 20px 0;
+    /* add 20px space above and below the element */
+    font-size: 18px;
+    /* set the font size to 18px */
+    border: 2px solid black;
+    display: block;
 }

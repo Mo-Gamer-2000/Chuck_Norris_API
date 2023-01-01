@@ -23,6 +23,35 @@
     </header>
     <main>
         <!-- main content goes here -->
+        <!-- Container for the under maintenance message -->
+        <div id="under-maintenance">
+            <!-- Message -->
+            <p><b>This page is under maintenance. Please check back later for updates.</b></p>
+        </div>
+        <!-- Section element containing the content -->
+        <section class="content">
+            <!-- Image element with a random image from Unsplash -->
+            <img src="https://source.unsplash.com/random/200x200?sig=2" alt="random" />
+
+            <!-- Div element with a class of "image-caption" containing a caption for the image -->
+            <div class="image-caption">
+                <p>Random Images from Unsplash</p>
+            </div>
+            <!-- Form for submitting the search query -->
+            <p>Suggestion to Search for: Car, Teacher, Cat, Dog, Tree and Hospital</p>
+            <p>The API is Limited to the Topics so you can not Search for Anything. It will not display anything if there
+                is no joke related to that Search.</p>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Enter your search query">
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Container for the search results -->
+            <div id="search-results" style="display: none;">
+                <!-- List of jokes -->
+                <ul id="jokes"></ul>
+            </div>
+
     </main>
     <footer>
         <!-- footer content goes here -->

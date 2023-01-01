@@ -77,3 +77,10 @@ jokeButton.addEventListener('click', function () {
     // Send the request
     xhr.send();
 });
+
+const skipButton = document.getElementById("skip-button");
+const mainContent = document.getElementById("main-content");
+
+skipButton.addEventListener("click", function () {
+    mainContent.scrollIntoView({ behavior: "smooth" });
+});

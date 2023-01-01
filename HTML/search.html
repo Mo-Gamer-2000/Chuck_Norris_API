@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <button id="skip-button">Skip to content</button>
     <header>
         <h1>Search - The Chuckle Factory</h1>
         <nav>
@@ -22,7 +23,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content">
         <!-- main content goes here -->
         <!-- Container for the under maintenance message -->
         <div id="under-maintenance">
@@ -44,6 +45,7 @@
                 there
                 is no joke related to that Search.</p>
             <form id="search-form">
+                <label for="search-input">Search:</label>
                 <input type="text" id="search-input" placeholder="Enter your search query">
                 <button type="submit">Search</button>
             </form>

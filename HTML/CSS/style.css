@@ -10,6 +10,27 @@ body {
   padding: 0;
 }
 
+#skip-button {
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+#skip-button:focus {
+  outline: none;
+}
+
+#skip-button:hover {
+  background-color: #666;
+}
+
 /* 
   Set the header background color to dark gray, the text color to white, 
   and display the header as a flex container with items aligned and justified to the center. 
@@ -79,7 +100,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
   min-height: calc(100vh - 80px);
 }
 
@@ -130,20 +150,6 @@ main {
 }
 
 /* 
-  Set the footer background color to dark gray, the text color to white, 
-  and display the footer as a flex container with items aligned and justified to the center. 
-  Set the height to 80px. 
-*/
-footer {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-}
-
-/* 
   Set the background color of the #joke-button element to dark gray, 
   the text color to white, and remove the border. 
   Add 10px padding to the top and bottom and 20px padding to the left and right. 
@@ -166,4 +172,18 @@ footer {
 */
 #joke-text {
   font-size: 18px;
+}
+
+/* 
+  Set the footer background color to dark gray, the text color to white, 
+  and display the footer as a flex container with items aligned and justified to the center. 
+  Set the height to 80px. 
+*/
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }

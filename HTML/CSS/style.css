@@ -1,125 +1,169 @@
 /* Add some basic styling to the page */
 
-/* Set the default font family for the page to sans-serif and remove the default margin and padding */
+/* 
+  Set the default font family for the page to sans-serif 
+  and remove the default margin and padding 
+*/
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Set the header background color to dark gray, the text color to white, and display the header as a flex container with items aligned and justified to the center. Set the height to 80px. */
+/* 
+  Set the header background color to dark gray, the text color to white, 
+  and display the header as a flex container with items aligned and justified to the center. 
+  Set the height to 80px. 
+*/
 header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
 }
 
-
-
+/* 
+  Set the nav element to display as a flex container with items aligned. 
+  Set the background color to dark gray and the text color to white. 
+  Set the font size to 1.2rem and the font weight to 600. 
+*/
 nav {
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
+/* 
+  Set the ul element within the nav element to display as a flex container. 
+  Remove the default list styling and margins and padding. 
+*/
 nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* 
+  Set the li elements within the nav element to have a 1rem margin on all sides. 
+*/
 nav li {
-    margin: 0 1rem;
+  margin: 0 1rem;
 }
 
+/* 
+  Set the a elements within the nav element to have white text with no text decoration. 
+  Set the text color to #999 when hovering over the element. 
+*/
 nav a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 nav a:hover {
-    color: #999;
+  color: #999;
 }
 
-/* Set the main section to display as a flex container with items aligned and justified to the center. Set the minimum height to the viewport height minus 80px (to account for the height of the header and footer). */
+/* 
+  Set the main element to display as a flex container with items aligned and justified to the center. 
+  Set the minimum height to the viewport height minus 80px 
+  (to account for the height of the header and footer). 
+*/
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: calc(100vh - 80px);
 }
 
-/* Set elements with the .content class to display as a flex container with items in a column and aligned to the center */
+/* 
+  Set elements with the .content class to display as a flex container with items in a column and aligned to the center 
+*/
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Add a top margin of 30px to images within the .content element */
+/* 
+  Add a top margin of 30px to images within the .content element 
+*/
 .content img {
-    margin: 30px 0 0 0;
-    width: 240px;
-    height: 210px;
-    border: 2px solid black;
+  margin: 30px 0 0 0;
+  width: 240px;
+  height: 210px;
+  border: 2px solid black;
 }
 
-/* Set elements with the .joke-box class to have a white background, a dark gray border, and 20px padding and margin */
+/* 
+  Set elements with the .joke-box class to have a white background, 
+  a dark gray border, and 20px padding and margin 
+*/
 .joke-box {
-    background-color: #fff;
-    border: 2px solid #333;
-    padding: 20px;
-    margin: 20px 0;
+  background-color: #fff;
+  border: 2px solid #333;
+  padding: 20px;
+  margin: 20px 0;
 }
 
-/* Add a bottom margin of 10px to h2 elements within the .joke-box element */
+/* 
+  Add a bottom margin of 10px to h2 elements within the .joke-box element 
+*/
 .joke-box h2 {
-    margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
 }
 
-/* Set the font size of paragraphs within the .joke-box element to 18px and remove the default margin */
+/* 
+  Set the font size of paragraphs within the .joke-box element to 18px 
+  and remove the default margin 
+*/
 .joke-box p {
-    font-size: 18px;
-    margin: 0;
+  font-size: 18px;
+  margin: 0;
 }
 
-/* Set the footer background color to dark gray, the text color to white, and display the footer as a flex container with items aligned and justified to the center. Set the height to 80px. */
+/* 
+  Set the footer background color to dark gray, the text color to white, 
+  and display the footer as a flex container with items aligned and justified to the center. 
+  Set the height to 80px. 
+*/
 footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
 
-/* Set the background color of the #joke-button element to dark gray, the text color to white, and remove the border. Add 10px padding to the top and bottom and 20px padding to the left and right. Set the cursor to be a pointer when hovering over the button. */
+/* 
+  Set the background color of the #joke-button element to dark gray, 
+  the text color to white, and remove the border. 
+  Add 10px padding to the top and bottom and 20px padding to the left and right. 
+  Set the cursor to be a pointer when hovering over the button. 
+*/
 #joke-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 2px solid black;
+  background-color: #333;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-/* Set the background color of the #joke-button element to darker gray when it is hovered over */
 #joke-button:hover {
-    background-color: #444;
+  background-color: #999;
 }
 
-/* Set the margin and font size of the #joke-text element */
+/* 
+  Set the font size of the #joke-text element to 18px 
+*/
 #joke-text {
-    margin: 20px 0;
-    /* add 20px space above and below the element */
-    font-size: 18px;
-    /* set the font size to 18px */
+  font-size: 18px;
 }

@@ -2,35 +2,51 @@
 //const hubspot = require('@hubspot/api-client')
 //const hubspotClient = new hubspot.Client({ accessToken: 26766887 })
 
+// Create a new XMLHttpRequest object
 const xhr1 = new XMLHttpRequest();
 
+// Set up an event listener to handle the response from the server
 xhr1.onreadystatechange = function () {
+    // Check if the request is finished (readyState DONE)
     if (xhr1.readyState === XMLHttpRequest.DONE) {
+        // If the request was successful (status 200), parse the response as JSON and log it to the console
         if (xhr1.status === 200) {
             console.log(JSON.parse(xhr1.responseText));
+            // If the request was not successful, log the status text to the console as an error
         } else {
             console.error(xhr1.statusText);
         }
     }
 };
 
+// Open a GET request to the Chuck Norris jokes API to get a random joke
 xhr1.open('GET', 'https://api.chucknorris.io/jokes/random');
+
+// Send the request
 xhr1.send();
 
-const xhr3 = new XMLHttpRequest();
+// Create a second XMLHttpRequest object
+const xhr2 = new XMLHttpRequest();
 
-xhr3.onreadystatechange = function () {
-    if (xhr3.readyState === XMLHttpRequest.DONE) {
-        if (xhr3.status === 200) {
-            console.log(JSON.parse(xhr3.responseText));
+// Set up an event listener to handle the response from the server
+xhr2.onreadystatechange = function () {
+    // Check if the request is finished (readyState DONE)
+    if (xhr2.readyState === XMLHttpRequest.DONE) {
+        // If the request was successful (status 200), parse the response as JSON and log it to the console
+        if (xhr2.status === 200) {
+            console.log(JSON.parse(xhr2.responseText));
+            // If the request was not successful, log the status text to the console as an error
         } else {
-            console.error(xhr3.statusText);
+            console.error(xhr2.statusText);
         }
     }
 };
 
-xhr3.open('GET', 'https://api.chucknorris.io/jokes/categories');
-xhr3.send();
+// Open a GET request to the Chuck Norris jokes API to get a list of categories
+xhr2.open('GET', 'https://api.chucknorris.io/jokes/categories');
+
+// Send the request
+xhr2.send();
 
 // Get a reference to the button and the joke text element
 const jokeButton = document.querySelector('#joke-button');
@@ -61,21 +77,3 @@ jokeButton.addEventListener('click', function () {
     // Send the request
     xhr.send();
 });
-
-const xhr = new XMLHttpRequest();
-
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            const categoriesList = document.querySelector('#categories');
-            data.forEach(category => {
-                const li = document.createElement('li');
-                li.textContent = category;
-                categoriesList.appendChild(li);
-            });
-        } else {
-            console.error(xhr.statusText);
-        }
-    }
-};

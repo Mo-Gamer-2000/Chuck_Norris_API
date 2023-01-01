@@ -32,7 +32,6 @@ xhr3.onreadystatechange = function () {
 xhr3.open('GET', 'https://api.chucknorris.io/jokes/categories');
 xhr3.send();
 
-
 const underMaintenance = document.getElementById('under-maintenance');
 
 // Check if the application is under maintenance

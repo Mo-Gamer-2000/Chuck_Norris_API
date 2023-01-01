@@ -213,9 +213,6 @@ main {
     height: 40px;
 }
 
-
-
-
 /* Set the footer background color to dark gray, the text color to white, and display the footer as a flex container with items aligned and justified to the center. Set the height to 80px. */
 footer {
     background-color: #333;

@@ -103,6 +103,14 @@ main {
   min-height: calc(100vh - 80px);
 }
 
+#unique {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
 /* 
   Set elements with the .content class to display as a flex container with items in a column and aligned to the center 
 */
@@ -121,6 +129,8 @@ main {
   height: 210px;
   border: 2px solid black;
 }
+
+
 
 /* 
   Set elements with the .joke-box class to have a white background, 

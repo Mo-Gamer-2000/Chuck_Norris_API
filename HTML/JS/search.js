@@ -87,7 +87,6 @@ searchInput.addEventListener('input', () => {
     }
 });
 
-
 const skipButton = document.getElementById("skip-button");
 const mainContent = document.getElementById("main-content");
 
